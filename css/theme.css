@@ -1,0 +1,436 @@
+/* 
+CHANGED COLORS
+CHANGED POSITIONS OF ELEMENTS 
+CHANGED BACKGROUND IMAGE
+CHANGED HEADER IMAGE
+CHANGED POSITION OF MENU BAR
+CHANGED LOOK OF STATS PAGE
+CHANGED FOOTER
+*/
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: lightgreen;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+#log{
+    display: none;
+}
+
+#myform{
+    display: auto;
+}
+
+form ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    align-items: center;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.errorMsg {
+    color: red;
+}
+
+input.was-validated:invalid {
+    color: red;
+    border: 1px solid red;
+}
+
+input.was-validated:valid {
+    border: 1px solid green;
+}
+
+input.was-validated:invalid ~ div.errorMsg {
+    display: block;
+}
+  
+input:valid ~ div.errorMsg, input:invalid ~ div.errorMsg {
+    display: none;
+}
+
+#thankyou {
+    display: none;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    padding-top: 50px;
+    text-shadow: 1px 1px lightblue;
+}
+
+form ul input, form ul textarea {
+    width: 100%;
+    min-width: 500px;
+    margin: 8px;
+}
+
+input:focus {
+    background-color: lightblue;
+}
+
+form ul label {
+    text-align: left;
+    display: flex;
+}
+
+#submitBtn {
+    width: 100px;
+    height: 50px;
+    background-color: lightblue;
+}
+
+#submitBtn:hover {
+    background-color: purple;
+}
+
+#vlog th, #vlog td {
+    border: 1px solid black;
+}
+
+#vlog td {
+    font-size: 1.5em;
+}
+
+#vlog {
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    border-spacing: 5px;
+    /* background-color: lightblue; */
+}
+
+.functions {
+    width: 50%;
+    height: 50px;
+    margin: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.functions:hover {
+    background-color: lightblue;
+}
+#vlog tr{
+    background-color: lightblue;
+    color: darkgreen;
+}
+
+/* #vlog tr:nth-child(odd) {
+    background-color: blue;
+    color: lightgreen;
+} */
+
+#logsheet {
+    display: none;
+}
+
+@media screen and (min-width: 768px){
+
+    #homepage {
+        display: grid;
+        grid-template-areas: 
+        "head head head head"
+        "himage himage text text";
+    }
+
+    #standings {
+        display: none;
+        justify-content: space-evenly;
+        grid-template-areas:
+        "stitle stitle stitle stitle"
+        "west west east east"
+        "west west east east"
+        "west west east east";
+        height: 100%;
+    }
+
+    #table table{
+        border-spacing: 2em;
+        border-collapse: collapse;
+        width: 40%;
+        height: 70%;
+    }
+
+    #stats { 
+        display: none;
+        grid-template-areas:
+        "head head head"
+        "sp choice st"
+        "choice choice choice"
+        "st st st";
+        justify-content: space-evenly;
+        padding-top: 30px;
+    }
+
+    #statsPhoto {
+        max-width: 500px;
+        max-height: 500px;
+    }
+
+    #highlights {
+        display: none;
+        grid-template-areas: 
+        "ht"
+        "if";
+        justify-content: center;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+    /* #homepage {
+        display: grid;
+        grid-template-areas: 
+        "head head head head"
+        "himage himage"
+        "text text";
+    } */
+
+    #homepage{
+        padding-top: 30px;
+        display: grid;
+        grid-template-areas: 
+        "himage"
+        "text";
+        /* grid-template-rows: 40% 58% 2%; */
+        /* grid-template-columns: 500px; */
+        width: 75%;
+        justify-content: center;
+        padding-left: 10%;
+    }
+
+    #homeImage{
+        /* display: inline-flex; */
+        /* margin-left: auto;
+        margin-right: auto; */
+        /* width: 50%; */
+        max-width: 500px;
+        max-height: 300px;
+        padding-top: none;
+    }
+
+    #standings {
+        display: none;
+        justify-content: space-evenly;
+        grid-template-areas:
+        "stitle stitle"
+        "west west"
+        "west west"
+        "west west"
+        "east east"
+        "east east"
+        "east east"
+        "foot foot";
+    }
+
+    #stats {
+        display: none;
+        grid-template-areas: 
+        "ch"
+        "stable"
+        "sphoto"
+        "foot";
+    }
+
+    /* #statsPhoto{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+    } */
+
+    #statsTable {
+        border: none;
+        padding: 20px;
+        border-spacing: 2em;
+        display: grid;
+        grid-area: stable;
+        justify-content: center;
+    }
+    
+    fieldset {
+        display: flex;
+        flex-direction: column;
+        grid-area: ch;
+        width: auto;
+        height: auto;
+        border: none;
+        /* justify-content: space-around; */
+        text-align: center;
+        /* align-content: center; */
+        padding-top: 1em;
+        font-size: 1em;
+        outline: none;
+    }
+    
+    #stats input {
+        padding: 1em;
+        display: none;
+    }
+
+    #statsPhoto {
+        /* CHANGED SO PICTURE SIZES ARE ALL SIMILAR */
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+        grid-area: sphoto;
+        object-fit: contain;
+        max-width: 500px;
+        max-height: 500px;
+    }
+    
+    #statsTable caption, #statsTable th, #statsTable td {
+        font-size: 1em;
+    }
+
+    label:hover {
+        color: darkblue;
+    }
+
+    #table table{
+        border-spacing: 1em;
+        border-collapse: collapse;
+        width: 40%;
+        height: 70%;
+    }
+
+    #highlights {
+        display: none;
+        grid-template-areas: 
+        "ht"
+        "if";
+        justify-content: center;
+    }
+
+    body {
+        background-color: lightgreen;
+    }
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    grid-area: "foot";
+    margin-top: auto;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    grid-area: "head";
+    background-image: url(background.jpg);
+    background-size: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    width: 100%;
+    /* background-position: 50%; */
+}
+
+ul, #title {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    justify-content: space-evenly;
+}
+
+#homelink {
+    text-decoration: none;
+    color: white;
+    text-shadow: 1px 1px lightgreen;
+}
+
+#homelink:hover {
+    color: lightgreen;
+}
+
+#overview {
+    display: flex;
+    grid-area: "text";
+    text-align: center;
+    align-items: center;
+    padding-left: 30px;
+}
+
+#homeImage {
+    grid-area: "himage";
+    /* max-width: 500px;
+    max-height: 500px; */
+}
+
+#west {
+    display: grid;
+    grid-area: west;
+    border-spacing: 2em;
+}
+
+#east {
+    display: grid;
+    grid-area: east;
+    border-spacing: 2em;
+}
+
+#table caption {
+    font-size: 10ch;
+}
+
+#table table{
+    border-spacing: 2em;
+    border-collapse: collapse;
+    width: 40%;
+    height: 70%;
+    justify-content: center;
+}
+
+#table tr:nth-child(odd) {
+    background-color: orange;
+}
+
+th {
+    text-align: left;
+    font-size: 2em;
+}
+
+td {
+    font-size: 3ch;
+}
+
+#standingsTitle {
+    display: grid;
+    grid-area: stitle;
+    text-align: center;
+    font-size: 2em;
+}
+
+#west caption, #east caption {
+    text-align: left;
+    font-size: 2em;
+}
+
+button {
+    background-color: lightgreen;
+    border-radius: 2px;
+    color: black;
+    text-shadow: 1px 1px aqua;
+}
+
+button:hover {
+    background-color: aqua;
+}
+
+strong {
+    font-size: 2em;
+}
+
+#highlights h2 {
+    grid-area: "ht";
+}
+
+iframe {
+    grid-area: "if";
+}

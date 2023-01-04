@@ -1,0 +1,483 @@
+/* 
+RESIZED IMAGES ON STATS PAGE SO THEY ARE ALWAYS SIMILAR
+CHANGED THE STATISTICS BUTTONS TO A COLUMN AS SUGGESTED
+CHANGED FOOTER TO ALWAYS BE AT BOTTOM OF PAGE
+FIXED PADDING ON HOMEPAGE TEXT
+ALTERED IMAGE SIZE ON HOMEPAGE
+CHANGED WIDTH OF HEADER TO 100% AS RECCOMENDED
+*/
+
+.blackorange {
+    text-shadow: 1px 1px orange;
+    color: black;
+    text-decoration: none;
+}
+.whiteorange {
+    text-shadow: 1px 1px orange;
+    color: white;
+    text-decoration: none;
+}
+
+#logsheet {
+    display: none;
+}
+
+#header ul {
+    display: grid;
+    grid-area: ul;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    align-items: center;
+    justify-content: space-evenly;
+    list-style: none;
+    color: white;
+    font-family: monospace;
+}
+
+strong {
+    font-family: monospace;
+    font-size: 1em;
+}
+
+#title {
+    display: grid;
+    grid-area: h1;
+    /* align-items: center; */
+    /* background-image: "jazzbanner.jpg"; */
+}
+
+#homelink:hover {
+    color: orange;
+}
+
+#header {
+    grid-area: header;
+    background: url("jazzbanner.jpg");
+    background-size: 100%;
+    background-size: cover;
+    display: grid;
+    /* grid-template-areas:
+    ". h1 ul ul ul ."
+    "home home home home home home"
+    "foot foot foot foot foot foot"; */
+    width: 100%;
+}
+
+#header button {
+    background-color: lightblue;
+    font-size: 2em;
+    border: 1px solid orange;
+    outline: none;
+}
+
+#header button:hover {
+    background-color: orange;
+}
+
+#homepage {
+    display: grid;
+    grid-area: home;
+    padding-top: 2em;
+    justify-content: center;
+    align-items: center;
+}
+
+#overview {
+    width: 100%;
+    font-size: 1.2em;
+    text-align: justify;
+    grid-area: overview;
+    align-items: center;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+#homeImage {
+    grid-area: homeImage;
+}
+
+#standings {
+    display: none;
+}
+
+#stats {
+    display: none;
+    padding-top: 2em;
+}
+
+#highlights {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    padding-top: 2em;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    /* background-image: linear-gradient(to bottom right, lightblue, orange); */
+    font-family: monospace;
+    /* height: 100%; */
+}
+
+/* #table {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+} */
+
+#west {
+    display: grid;
+    grid-area: west;
+    border-spacing: 2em;
+}
+
+#east {
+    display: grid;
+    grid-area: east;
+    border-spacing: 2em;
+}
+
+#table caption {
+    font-size: 15ch;
+}
+
+#table table{
+    border-spacing: 2em;
+    border-collapse: collapse;
+    width: 40%;
+    height: 70%;
+}
+
+#table tr:nth-child(odd) {
+    background-color: orange;
+}
+
+th {
+    text-align: left;
+    font-size: 2em;
+}
+
+td {
+    font-size: 12px;
+}
+
+#standingsTitle {
+    display: grid;
+    grid-area: stitle;
+    text-align: center;
+    font-size: 2em;
+}
+
+#west caption, #east caption {
+    text-align: left;
+    font-size: 2em;
+}
+
+footer {
+    /* CHANGED SO FOOTER IS ALWAYS AT BOTTOM */
+    /* display: none; */
+    width: 100%;
+    height: 50px;
+    background-color: orange;
+    text-align: center;
+    grid-area: foot;
+    margin-top: auto;
+}
+
+#statsTable {
+    border: none;
+    padding: 20px;
+    border-spacing: 2em;
+    display: grid;
+    grid-area: stable;
+    justify-content: center;
+}
+
+#statsTable td {
+    text-shadow: 1px 1px orange;
+}
+
+fieldset {
+    display: flex;
+    flex-direction: column;
+    grid-area: ch;
+    width: auto;
+    height: auto;
+    border: none;
+    /* justify-content: space-around; */
+    text-align: center;
+    /* align-content: center; */
+    padding-top: 1em;
+    font-size: 2em;
+    outline: none;
+}
+
+fieldset input {
+    padding: 1em;
+    display: none;
+}
+
+#statsPhoto {
+    /* CHANGED SO PICTURE SIZES ARE ALL SIMILAR */
+    display: grid;
+    grid-area: sphoto;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    max-width: 500px;
+    max-height: 500px;
+}
+
+#statsTable caption, #statsTable th, #statsTable td {
+    font-size: 2em;
+}
+
+#video {
+    grid-area: video;
+    align-items: center;
+    background-color: red;
+}
+
+#highlights h2 {
+    grid-area: vidTitle;
+    text-align: center;
+}
+
+html {
+    height: 100%;
+}
+
+#log{
+    display: none;
+}
+
+#myform{
+    display: auto;
+}
+
+form ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    align-items: center;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.errorMsg {
+    color: red;
+}
+
+input.was-validated:invalid {
+    color: red;
+    border: 1px solid red;
+}
+
+input.was-validated:valid {
+    border: 1px solid green;
+}
+
+input.was-validated:invalid ~ div.errorMsg {
+    display: block;
+}
+  
+input:valid ~ div.errorMsg, input:invalid ~ div.errorMsg {
+    display: none;
+}
+
+#thankyou {
+    display: none;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    padding-top: 50px;
+    text-shadow: 1px 1px lightblue;
+}
+
+form ul input, form ul textarea {
+    width: 100%;
+    min-width: 500px;
+    margin: 8px;
+}
+
+input:focus {
+    background-color: lightblue;
+}
+
+form ul label {
+    text-align: left;
+    display: flex;
+}
+
+#submitBtn {
+    width: 100px;
+    height: 50px;
+    background-color: lightblue;
+}
+
+#submitBtn:hover {
+    background-color: purple;
+}
+
+#vlog th, #vlog td {
+    border: 1px solid black;
+}
+
+#vlog td {
+    font-size: 1.5em;
+}
+
+#vlog {
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    border-spacing: 5px;
+    /* background-color: lightblue; */
+}
+
+.functions {
+    width: 50%;
+    height: 50px;
+    margin: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.functions:hover {
+    background-color: lightblue;
+}
+#vlog tr:nth-child(even) {
+    background-color: lightpink;
+}
+
+#vlog tr:nth-child(odd) {
+    background-color: lightblue;
+}
+
+
+@media screen and (min-width: 768px){
+    #header {
+        display: grid;
+        grid-template-areas:
+        ". h1 ul ul ul .";
+        /* "home home home home home home"
+        "foot foot foot foot foot foot"; */
+    }
+    #homepage {
+        display: grid;
+        grid-template-areas:
+        ". . overview overview homeImage homeImage . ."
+        ". . foot foot foot foot . .";
+        justify-content: space-around;
+    }
+    #standings {
+        justify-content: space-evenly;
+        grid-template-areas:
+        "stitle stitle stitle stitle"
+        "west west east east"
+        "west west east east"
+        "west west east east";
+        height: 100%;
+    }
+    #stats {
+        grid-template-areas: 
+        ". . . ."
+        ". ch sphoto  ."
+        ". stable sphoto ."
+        ". stable sphoto ."
+        "foot foot foot foot";
+    }
+    #highlights  {
+        grid-template-areas: 
+        ". vidTitle . "
+        ".vidTitle ."
+        ".  video .";
+    }
+    body {
+        background-image: linear-gradient(to bottom right, lightblue, orange);
+    }
+    #overview {
+        width: 75%;
+    }
+}
+
+@media screen and (max-width: 768px){
+    #header {
+        grid-template-areas: 
+        "h1 h1 h1 h1"
+        "ul ul ul ul";
+        background-size: cover;
+    }
+    #title {
+        display: grid;
+        text-align: center;
+    }
+    #menu li{
+        display: grid;
+        justify-content: center;
+    }
+    #homepage{
+        display: grid;
+        grid-template-areas: 
+        "homeImage"
+        "overview";
+        /* grid-template-rows: 40% 58% 2%; */
+        grid-template-columns: 500px;
+    }
+
+    #homeImage{
+        /* display: inline-flex; */
+        /* margin-left: auto;
+        margin-right: auto; */
+        /* width: 50%; */
+        max-width: 500px;
+        max-height: 300px;
+        padding-top: none;
+    }
+
+    #overview {
+        padding-bottom:  30px;
+        text-align: center;
+    }
+
+    body{
+        /* background-image: linear-gradient(to bottom right, lightblue, orange); */
+        background-color: orange !important;
+    }
+    #standings {
+        justify-content: space-evenly;
+        grid-template-areas:
+        "stitle stitle"
+        "west west"
+        "west west"
+        "west west"
+        "east east"
+        "east east"
+        "east east"
+        "foot foot";
+    }
+
+    #stats {
+        grid-template-areas: 
+        "ch"
+        "stable"
+        "sphoto"
+        "foot";
+    }
+
+    #statsPhoto{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+    }
+
+    #highlights {
+        grid-template-areas: 
+            "vidTitle"
+            "video"
+            "foot";
+    }
+}
