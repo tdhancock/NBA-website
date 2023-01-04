@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NBA Stats & Highlights</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <link id="css" href="css/main.css" rel="stylesheet">
+    <!-- <script src="js/view.js" type="module"></script>
+    <script src="js/model.js" type="module"></script> -->
+    <script src="js/validation.js"></script>
+    <script src="js/controller.js" type="module"></script>
+</head>
+<body>
+    <header id="header">
+        <h1 id="title"><a href="index.html" id="homelink" class="whiteorange">NBA Standings, Statistics & Highlights</a></h1>
+            <!-- <ul id="menu">
+                <li><button type="button" id="standingsButton"><strong>Standings</strong></button></li>
+                <li><button type="button" id="statisticsButton"><strong>Statistics</strong></button></li>
+                <li><button type="button" id="highlightsButton"><strong>Highlights</strong></button></li>
+            </ul> -->
+            <!-- <nav id="menu"> -->
+                <ul>
+                    <li><button type="button" id="standingsButton"><strong>Standings</strong></button></li>
+                    <li><button type="button" id="statisticsButton"><strong>Statistics</strong></button></li>
+                    <li><button type="button" id="highlightsButton"><strong>Highlights</strong></button></li>
+                    <li><button type="button" id="logVisit"><strong>Visitors</strong></button></li>
+                    <li><button type="button" id="change"><strong>Theme</strong></button></li>
+                </ul>
+            <!-- </nav> -->
+    </header>
+    <section id="homepage">
+        <article id="overview">
+            The National Basketball Association (NBA) is a professional basketball league in North America comprising 30 franchises, of which 29 are located in the United States and one in Canada (Toronto Raptors). The league was founded in 1946, then named the Basketball Association of America (BAA). In 1949, the BAA merged with the rival National Basketball League (NBL) to form the National Basketball Association.
+            <br><br>Today the NBA as a whole generates around eight billion U.S. dollars in revenue per season, an average per team of around 264 million U.S. dollars in the 2019/20 season. In that year, the Golden State Warriors, the New York Knicks and the Los Angeles Lakers were the only teams with more than 400 million U.S. dollars in annual revenue. All other teams in the NBA generated more than 200 million U.S. dollars in revenue in the 2019/20 season, with the New leans Pelicans generating the lowest revenue in the league - 209 million U.S. dollars.
+            <br><br>The New York Knicks are the most valuable franchise of the league with a total value of around five billion U.S. dollars. All other NBA franchises have a value of at least 1.3 billion U.S. dollars or more. The least valuable franchise is the Memphis Grizzlies with a value of 1.3 billion U.S. dollars. On average, NBA franchises have an estimated value of around 2.2 billion U.S. dollars. In comparison, the average franchise value in the NFL was just over three billion U.S. dollars, in the MLB 1.85 billion U.S. dollars, and in the NHL 653 million U.S. dollars. During the NBA regular season, a league wide total of 1,230 games are played, with each team playing 82 games. The average regular season home attendance in the league was 17,750 during the 2019/20 season.
+        </article>
+        <figure>
+            <img src="mitchellDunk.png" id="homeImage">
+            <figcaption>Donovan Mitchell, Utah Jazz Shooting Guard</figcaption>
+        </figure>
+    </section>
+    <section id="standings">
+        <h2 id="standingsTitle" class="blackorange">NBA STANDINGS</h2>
+        <!-- <div id="table"> -->
+            <table id="west">
+                <caption class="blackorange">WESTERN CONFERENCE</caption>
+                <tr>
+                    <th>TEAM</th>
+                    <th>WINS</th>
+                    <th>LOSSES</th>
+                </tr>
+                <tr>
+                    <td>1-Phoenix Suns</td>
+                    <td>56</td>
+                    <td>14</td>
+                </tr>
+                <tr>
+                    <td>2-Memphis Grizzlies</td>
+                    <td>48</td>
+                    <td>22</td>
+                </tr>
+                <tr>
+                    <td>3-Golden State Warriors</td>
+                    <td>47</td>
+                    <td>23</td>
+                </tr>
+                <tr>
+                    <td>4-Utah Jazz</td>
+                    <td>43</td>
+                    <td>26</td>
+                </tr>
+                <tr>
+                    <td>5-Dallas Mavericks</td>
+                    <td>43</td>
+                    <td>26</td>
+                </tr>
+                <tr>
+                    <td>6-Denver Nuggets</td>
+                    <td>42</td>
+                    <td>28</td>
+                </tr>
+                <tr>
+                    <td>7-Minnesota Timberwolves</td>
+                    <td>41</td>
+                    <td>30</td>
+                </tr>
+                <tr>
+                    <td>8-LA Clippers</td>
+                    <td>36</td>
+                    <td>36</td>
+                </tr>
+                <tr>
+                    <td>9-LA Lakers</td>
+                    <td>29</td>
+                    <td>40</td>
+                </tr>
+                <tr>
+                    <td>10-New Orleans Pelicans</td>
+                    <td>28</td>
+                    <td>41</td>
+                </tr>
+                <tr>
+                    <td>11-San Antonio Spurs</td>
+                    <td>27</td>
+                    <td>43</td>
+                </tr>
+                <tr>
+                    <td>12-Portland Trail Blazers</td>
+                    <td>26</td>
+                    <td>42</td>
+                </tr>
+                <tr>
+                    <td>13-Sacramento Kings</td>
+                    <td>25</td>
+                    <td>46</td>
+                </tr>
+                <tr>
+                    <td>14-OKC Thunder</td>
+                    <td>20</td>
+                    <td>49</td>
+                </tr>
+                <tr>
+                    <td>15-Houston Rockets</td>
+                    <td>17</td>
+                    <td>52</td>
+                </tr>
+            </table>
+            <table id="east">
+                <caption class="blackorange">EASTERN CONFERENCE</caption>
+                <tr>
+                    <th>TEAM</th>
+                    <th>WINS</th>
+                    <th>LOSSES</th>
+                </tr>
+                <tr>
+                    <td>1-Miami Heat</td>
+                    <td>46</td>
+                    <td>24</td>
+                </tr>
+                <tr>
+                    <td>2-Milwaukee Bucks</td>
+                    <td>44</td>
+                    <td>26</td>
+                </tr>
+                <tr>
+                    <td>3-Philadelphia 76ers</td>
+                    <td>42</td>
+                    <td>26</td>
+                </tr>
+                <tr>
+                    <td>4-Boston Celtics</td>
+                    <td>42</td>
+                    <td>28</td>
+                </tr>
+                <tr>
+                    <td>5-Chicago Bulls</td>
+                    <td>41</td>
+                    <td>28</td>
+                </tr>
+                <tr>
+                    <td>6-Cleveland Cavaliers</td>
+                    <td>39</td>
+                    <td>30</td>
+                </tr>
+                <tr>
+                    <td>7-Toronto Raptors</td>
+                    <td>39</td>
+                    <td>30</td>
+                </tr>
+                <tr>
+                    <td>8-Brooklyn Nets</td>
+                    <td>36</td>
+                    <td>34</td>
+                </tr>
+                <tr>
+                    <td>9-Charlotte Hornets</td>
+                    <td>35</td>
+                    <td>35</td>
+                </tr>
+                <tr>
+                    <td>10-Atlanta Hawks</td>
+                    <td>34</td>
+                    <td>35</td>
+                </tr>
+                <tr>
+                    <td>11-Washington Wizards</td>
+                    <td>29</td>
+                    <td>39</td>
+                </tr>
+                <tr>
+                    <td>12-New York Knicks</td>
+                    <td>29</td>
+                    <td>40</td>
+                </tr>
+                <tr>
+                    <td>13-Indiana Pacers</td>
+                    <td>23</td>
+                    <td>47</td>
+                </tr>
+                <tr>
+                    <td>14-Detroit Pistons</td>
+                    <td>18</td>
+                    <td>51</td>
+                </tr>
+                <tr>
+                    <td>15-Orlando Magic</td>
+                    <td>18</td>
+                    <td>52</td>
+                </tr>
+            </table>
+        <!-- </div> -->
+    </section>
+    <section id="stats">
+        <!-- <div id="statsPage"> -->
+            <fieldset id="fieldset" class="blackorange">
+                <legend>Choose a player!</legend>
+
+                <input type="radio" name="statsButton" value="Donovan Mitchell" id="mitchell">
+                <label for="mitchell">Donovan Mitchell</label>
+
+                <input type="radio" name="statsButton" value="Luka Doncic" id="luka">
+                <label for="luka">Luka Doncic</label>
+
+                <input type="radio" name="statsButton" value="Rudy Gobert" id="gobert">
+                <label for="gobert">Rudy Gobert</label>
+            </fieldset>
+            <table id="statsTable">
+                <caption id="statsCaption">Donovan Mitchell Stats</caption>
+                <tr>
+                    <th>PPG</th>
+                    <th>APG</th>
+                    <th>RPG</th>
+                    <th>SPG</th>
+                    <th>BPG</th>
+                    <th>FG%</th>
+                    <th>3P%</th>
+                </tr>
+                <tr>
+                    <td id="points">25.7</td>
+                    <td id="ast">5.5</td>
+                    <td id="rbs">4.1</td>
+                    <td id="stl">1.5</td>
+                    <td id="blk">0.2</td>
+                    <td id="fg">45.1%</td>
+                    <td id="3p">35.9%</td>
+                </tr>
+            </table>
+            <img src="mitchellDunk.png" id="statsPhoto">
+        <!-- </div> -->
+    </section>
+    <section id="highlights">
+        <!-- <div id="vidPage"> -->
+            <h2>2021-2022 NBA Highlight compilation</h2>
+            <iframe width="500" height="250" src="https://www.youtube.com/embed/5_2DRVYNxYI" frameborder="0" id="video" allowfullscreen></iframe>
+        <!-- </div> -->
+    </section>
+    <section id="log">
+        <form id="myform" novalidate>
+            <ul class="flex">
+              <li class="section-display">
+                <label for="first-name">First Name</label>
+                <input type="text" id="first-name" name="first-name" 
+                      placeholder="Enter your first name here" pattern="\b([A-ZÀ-ÿ][-,a-z. ']+[ ]*)+" required>
+                <div class="errorMsg">Enter a valid First Name</div>
+              </li>
+              <li >
+                <label for="last-name">Last Name</label>
+                <input type="text"  id="last-name" name="last-name" placeholder="Enter your last name here" pattern="\b([A-ZÀ-ÿ][-,a-z. ']+[ ]*)+" required>
+                <div class="errorMsg">Enter a valid Last Name</div>
+              </li>
+              <li >
+                <label for="address">Address</label>
+                <input type="text"  id="address" name="address" placeholder="Enter your address here" required>
+                <div class="errorMsg">Please enter a valid Address</div>
+              </li>
+              <li >
+                <label for="city">City</label>
+                <input type="text"  id="city" name="city" placeholder="Enter your city here" required>
+                <div class="errorMsg">Please enter a valid City</div>
+              </li>
+              <li >
+                <label for="state">State</label>
+                <input type="text"  id="state"  name="state" placeholder="Enter your state here" maxlength="2" required>
+                <div class="errorMsg">Please enter a valid State</div>
+              </li>
+              <li >
+                <label for="zip">Zip</label>
+                <input id="zip" name="zip" type="text" placeholder="Enter a zip code here" pattern="^\d{5}$" required>
+                <div class="errorMsg">You must enter a valid Zip Code</div>
+              </li>
+              <li >
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email here" pattern="^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$" required>
+                <div class="errorMsg">You must enter a valid email</div>
+              </li>
+              <li>
+                <label for="phone">Phone</label>
+                <input type="phone" id="phone" placeholder="Enter your phone here" pattern="^\(?([0-9]{3})\)?[-.●]?([0-9]{3})[-.●]?([0-9]{4})$" required>
+                <div class="errorMsg">You must enter a valid phone number</div>
+              </li>
+              <li>
+                <h2>How did you find my page?</h2>
+              </li>
+              <li>
+                <input type="checkbox" id='google' name='find-page' value="google">
+                <label for="google">Google Search</label>
+              </li>
+              <li>
+                <input type="checkbox" id='friend' name='find-page' value="friend">
+                <label for="friend">Friend</label>
+              </li>
+              <li>
+                <input type="checkbox" id='newspaper' name='find-page' value="newspaper">
+                <label for="newspaper">News Paper</label>
+                <!--NOte that I have added the errorMsg div under the 'newspaper' checkbox.  When marking this group as 'valid' or 'invalid' you can just call setElementValidity on this one element instead of all of them 
+                -->
+                <div class="errorMsg">You must check at least one</div>
+              </li>
+              
+              <!-- <li>
+                <label for="comment">Comments</label>
+                <textarea rows="4" id="comment" placeholder="Enter your comments here"></textarea>
+              </li> -->
+              
+              <li>
+                <button id="submitBtn" type="submit">Send</button>
+              </li>
+            </ul>
+          </form>
+          <button class='functions' id="logChange">View Log</button>
+          <p id="thankyou">Thank you for submitting!</p>
+    </section>
+    <section id="logsheet">
+        <button class='functions' id="newVisitor">ADD A NEW VISITOR</button>
+        <div id="infosheet"></div>
+        <button class='functions' id='prompt'>DELETE USER</button>
+        <button class='functions' id='update'>UPDATE USER</button>
+    </section>
+    <footer>
+        <div>
+            <p>
+                Tanner Hancock - UVU - 2022
+            </p>
+        </div>  
+    </footer> 
+
+</body>
+</html>
